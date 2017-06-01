@@ -3,14 +3,20 @@
 	<div class="container center-align">
 		{% for pin in pins %}
 			<div class="row">
-				<h4>{{ pins[pin].name }}
-				{% if pins[pin].state == true %}
-					is currently <strong>on</strong>
-					<a href="/api/{{pin}}/off" class="waves-effect waves-light btn">Turn off</a>
-				{% else %}
-					is currently <strong>off</strong>
-					<a href="/api/{{pin}}/on" class="waves-effect waves-light btn">Turn on</a>
-				{% endif %}
+				<h4>
+					{{ pins[pin].name }}
+					{% if pins[pin].state == true %}
+						is currently <strong>on</strong>
+						<a href="/api/{{pin}}/off" class="waves-effect waves-light btn">Turn off</a>
+					{% else %}
+						is currently <strong>off</strong>
+						<a href="/api/{{pin}}/on" class="waves-effect waves-light btn">Turn on</a>
+					{% endif %}
+						<a href="/powertv" class="waves-effect waves-light btn">TV Power Button</a>
+						<a href="/volumeup" class="waves-effect waves-light btn">+ Volume</a>
+						<a href="/volumedown" class="waves-effect waves-light btn">- Volume</a>
+						<a href="/channelup" class="waves-effect waves-light btn">+ Channel</a>
+						<a href="/channeldown" class="waves-effect waves-light btn">- Channel</a>
 				</h4>
 			</div>
 		{% endfor %}

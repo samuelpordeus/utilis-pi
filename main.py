@@ -87,6 +87,27 @@ def powertv():
     os.system("irsend SEND_ONCE samsungTV KEY_POWER")
     return redirect(url_for('main'))
 
+@app.route('/channelup')
+def powertv():
+    os.system("irsend SEND_ONCE samsungTV KEY_CHANNELUP")
+    return redirect(url_for('main'))
+
+@app.route('/volumeup')
+def powertv():
+    os.system("irsend SEND_ONCE samsungTV KEY_VOLUMELUP")
+    return redirect(url_for('main'))
+
+@app.route('/channeldown')
+def powertv():
+    os.system("irsend SEND_ONCE samsungTV KEY_CHANNELDOWN")
+    return redirect(url_for('main'))
+
+@app.route('/volumedown')
+def powertv():
+    os.system("irsend SEND_ONCE samsungTV KEY_VOLUMEDOWN")
+    return redirect(url_for('main'))
+
+
 @app.route('/logout')
 def logout():
     flask_login.logout_user()
